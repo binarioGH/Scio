@@ -39,7 +39,8 @@ class Worder:
 			return -1
 		else:
 			self.content = content
-	def check_translation(self,answare):
+	def check_translation(self, entry):
+		answare = entry.get()
 		if self.content != 0:
 			if answare.lower() in self.content[self.label["text"]]:
 				sound("source\\correct.wav")
@@ -48,6 +49,7 @@ class Worder:
 				sleep(0.4)
 				self.label.config(bg=SILVER)
 				self.newWord()
+				entry.delete(0, END)
 				return 1
 			else:
 				sound("source\\wrong.wav")
@@ -77,8 +79,11 @@ class Worder:
 	def getansw(self):
 		self.cleanansw()
 		current = self.label["text"]
-		for word in self.content[current]:
+		if type(self.content[current]) == type(""):
 			self.answares.insert(END, word)
+		else:
+			for word in self.content[current]:
+				self.answares.insert(END, word)
 
 
 def main():
@@ -105,7 +110,7 @@ def main():
 	console.place(relx=0, rely=0, relwidth=0.4, relheight=1.1)
 	answare = Entry(console, font=("Courier", 16))
 	answare.place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.05)
-	send = Button(console, text="Check!", font=("Courier", 16), command=lambda: wordquestion.check_translation(answare.get()))
+	send = Button(console, text="Check!", font=("Courier", 16), command=lambda: wordquestion.check_translation(answare))
 	send.place(relx=0.1, rely=0.17, relwidth=0.3, relheight=0.05)
 	copytext = Button(console, text="Copy!", font=("Courier", 16), command=lambda: copy(wordquestion.label["text"]))
 	copytext.place(relx=0.1, rely=0.24, relwidth=0.3, relheight=0.05)
