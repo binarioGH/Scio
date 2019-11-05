@@ -5,6 +5,7 @@ from codecs import open as copen
 from random import choice
 from pyperclip import copy
 from winsound import PlaySound, SND_ASYNC, SND_ALIAS
+from time import sleep
 
 def sound(file):
 	PlaySound(file, SND_ASYNC)
@@ -12,14 +13,18 @@ def sound(file):
 
 WIDTH = 700
 HEIGHT= 400 
-GREEN = "#2ECC71"
+BLUE = "#2E2EFE"
+GREEN = "#00FF80"
 SILVER = "#ECF0F1"
+YELLOW = "#F7FE2E"
+RED = "#DF013A"
 
 class Worder:
 	def __init__(self,root, file="", open_file=True, fnt=("Courier", 15)):
-		self.label = Label(root, bg=GREEN, font=fnt, fg="black", justify="left")
+		self.label = Label(root, bg=SILVER, font=fnt, fg="black", justify="left")
 		self.file = file
 		self.content = 0
+		self.root = root
 		if open_file:
 			self.load_file()
 			if self.content:
@@ -37,10 +42,18 @@ class Worder:
 		if self.content != 0:
 			if answare.lower() in self.content[self.label["text"]]:
 				sound("source\\correct.wav")
+				self.label.config(bg=GREEN)
+				self.root.update()
+				sleep(0.4)
+				self.label.config(bg=SILVER)
 				self.newWord()
 				return 1
 			else:
 				sound("source\\wrong.wav")
+				self.label.config(bg=RED)
+				self.root.update()
+				sleep(0.4)
+				self.label.config(bg=SILVER)
 				#print(":(")
 				return 0
 		else:
