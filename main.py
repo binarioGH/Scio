@@ -20,8 +20,9 @@ YELLOW = "#F7FE2E"
 RED = "#DF013A"
 
 class Worder:
-	def __init__(self,root, file="", open_file=True, fnt=("Courier", 15)):
+	def __init__(self,root, file="", answares="" ,open_file=True, fnt=("Courier", 15)):
 		self.label = Label(root, bg=SILVER, font=fnt, fg="black", justify="left")
+		self.answares = answares
 		self.file = file
 		self.content = 0
 		self.root = root
@@ -61,6 +62,7 @@ class Worder:
 			return -1
 
 	def newWord(self):
+		self.cleanansw()
 		current = self.label["text"]
 		newword = choice(self.wordlist)
 		#print("owo")
@@ -68,6 +70,16 @@ class Worder:
 		    newword = choice(self.wordlist)
 		#print("uwu")
 		self.label.config(text=newword)		
+
+	def cleanansw(self):
+		self.answares.delete(0, END)
+
+	def getansw(self):
+		self.cleanansw()
+		current = self.label["text"]
+		for word in self.content[current]:
+			self.answares.insert(END, word)
+
 
 def main():
 	root = Tk()
@@ -82,7 +94,12 @@ def main():
 	promp.place(relx=0, rely=0.01, relwidth=0.7, relheight=0.4)
 	questionborder = Label(questions, bg="black")
 	questionborder.place(relx=0, rely=0.3, relwidth=1, relheight=0.052)
-	wordquestion = Worder(questions, "source\\esperanto-english.json")
+	answarebox = Listbox(questions, bg="white", font=("Courier", 14))
+	answarebox.place(relx=0.15, rely=0.45, relwidth=0.7, relheight=0.4)
+	scrollbar = Scrollbar(answarebox)
+	scrollbar.pack(side=RIGHT, fill=Y)
+	scrollbar.config(command=answarebox.yview)
+	wordquestion = Worder(questions, "source\\esperanto-english.json", answarebox)
 	wordquestion.label.place(relx=0, rely=0.3, relwidth=0.99, relheight=0.05)
 	console = Canvas(mainpage,bg=GREEN)
 	console.place(relx=0, rely=0, relwidth=0.4, relheight=1.1)
@@ -94,6 +111,8 @@ def main():
 	copytext.place(relx=0.1, rely=0.24, relwidth=0.3, relheight=0.05)
 	newwbutton = Button(console, text="NEW WORD", font=("Courier", 11), command=lambda: wordquestion.newWord())
 	newwbutton.place(relx=0.5, rely=0.17, relwidth=0.3, relheight=0.05)
+	getans = Button(console, text="ANSWARES", font=("Courier", 11), command=lambda: wordquestion.getansw())
+	getans.place(relx=0.5, rely=0.24, relwidth=0.3, relheight=0.05)
 	root.mainloop()
 
 
