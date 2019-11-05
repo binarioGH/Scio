@@ -4,6 +4,11 @@ from json import loads
 from codecs import open as copen
 from random import choice
 from pyperclip import copy
+from winsound import PlaySound, SND_ASYNC, SND_ALIAS
+
+def sound(file):
+	PlaySound(file, SND_ASYNC)
+
 
 WIDTH = 700
 HEIGHT= 400 
@@ -31,9 +36,11 @@ class Worder:
 	def check_translation(self,answare):
 		if self.content != 0:
 			if answare.lower() in self.content[self.label["text"]]:
+				sound("source\\correct.wav")
 				self.newWord()
 				return 1
 			else:
+				sound("source\\wrong.wav")
 				#print(":(")
 				return 0
 		else:
