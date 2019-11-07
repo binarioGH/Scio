@@ -83,10 +83,10 @@ class Worder:
 			self.answares.insert(END, word)
 		else:
 			for word in self.content[current]:
-				self.answares.insert(END, "    {}".format(word))
+				self.answares.insert(END, "    {}".format(word.title()))
 	def addNewAnsware(self, ans):
-		print(":)")
-		print(ans)
+		#print(":)")
+		#print(ans)
 		if self.content:
 			word = self.label["text"]
 			if word in self.content:
@@ -97,9 +97,17 @@ class Worder:
 						ans = ans.lower()
 						ans = ans.strip()
 						#print(" 3")
+						self.label.config(bg=YELLOW)
+						sound("source\\added.wav")
+						self.root.update()
 						self.content[word].append(ans)
+						self.getansw()
+						sleep(0.4)
+						self.label.config(bg=SILVER)
+						self.root.update()
 						with open(self.file, "w", encoding="utf-8") as f:
 							f.write(dumps(self.content, indent=4))
+						
 						#print("Added {} to {}".format(ans, word))
 					
 
@@ -137,7 +145,7 @@ def main():
 	getans = Button(console, text="ANSWARES", font=("Courier", 11), command=lambda: wordquestion.getansw())
 	getans.place(relx=0.5, rely=0.24, relwidth=0.3, relheight=0.05)
 	newans = Button(console, text="Add Answare", font=("Courier", 18), command=lambda: wordquestion.addNewAnsware(answare.get()))
-	newans.place(relx=0.1, rely=0.31, relwidth=0.7, relheight=0.05)
+	newans.place(relx=0.1, rely=0.8, relwidth=0.7, relheight=0.05)
 	root.mainloop()
 
 
