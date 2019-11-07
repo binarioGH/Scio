@@ -85,19 +85,22 @@ class Worder:
 			for word in self.content[current]:
 				self.answares.insert(END, "    {}".format(word))
 	def addNewAnsware(self, ans):
+		print(":)")
 		print(ans)
 		if self.content:
 			word = self.label["text"]
 			if word in self.content:
-				print(" 1")
+				#print(" 1")
 				if not ans in self.content[word]:
-					print(" 2")
+					#print(" 2")
 					if ans != " " and ans != "":
-						print(" 3")
+						ans = ans.lower()
+						ans = ans.strip()
+						#print(" 3")
 						self.content[word].append(ans)
 						with open(self.file, "w", encoding="utf-8") as f:
 							f.write(dumps(self.content, indent=4))
-						print("Added {} to {}".format(ans, word))
+						#print("Added {} to {}".format(ans, word))
 					
 
 
@@ -121,6 +124,7 @@ def main():
 	questionborder.place(relx=0, rely=0.3, relwidth=1, relheight=0.052)
 	wordquestion = Worder(questions, "source\\esperanto-english.json", answarebox)
 	wordquestion.label.place(relx=0, rely=0.3, relwidth=0.99, relheight=0.050)
+	console = Canvas(mainpage,bg=GREEN)
 	console.place(relx=0, rely=0, relwidth=0.4, relheight=1.1)
 	answare = Entry(console, font=("Courier", 16))
 	answare.place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.05)
@@ -132,6 +136,8 @@ def main():
 	newwbutton.place(relx=0.5, rely=0.17, relwidth=0.3, relheight=0.05)
 	getans = Button(console, text="ANSWARES", font=("Courier", 11), command=lambda: wordquestion.getansw())
 	getans.place(relx=0.5, rely=0.24, relwidth=0.3, relheight=0.05)
+	newans = Button(console, text="Add Answare", font=("Courier", 18), command=lambda: wordquestion.addNewAnsware(answare.get()))
+	newans.place(relx=0.1, rely=0.31, relwidth=0.7, relheight=0.05)
 	root.mainloop()
 
 
