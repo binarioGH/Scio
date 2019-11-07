@@ -1,6 +1,6 @@
 #-*-coding: utf-8-*-
 from tkinter import *
-from json import loads
+from json import loads, dumps
 from codecs import open as copen
 from random import choice
 from pyperclip import copy
@@ -35,7 +35,7 @@ class Worder:
 		try:
 			with copen(self.file, "r", encoding="utf-8") as f:
 				content = loads(f.read())
-		except Exception as e:
+		except Exception as e: 
 			return -1
 		else:
 			self.content = content
@@ -83,7 +83,22 @@ class Worder:
 			self.answares.insert(END, word)
 		else:
 			for word in self.content[current]:
-				self.answares.insert(END, word)
+				self.answares.insert(END, "    {}".format(word))
+	def addNewAnsware(self, ans):
+		print(ans)
+		if self.content:
+			word = self.label["text"]
+			if word in self.content:
+				print(" 1")
+				if not ans in self.content[word]:
+					print(" 2")
+					if ans != " " and ans != "":
+						print(" 3")
+						self.content[word].append(ans)
+						with open(self.file, "w", encoding="utf-8") as f:
+							f.write(dumps(self.content, indent=4))
+						print("Added {} to {}".format(ans, word))
+					
 
 
 def main():
@@ -97,16 +112,15 @@ def main():
 	promp = Label(questions, bg=SILVER, font=("Courier", 18))
 	promp["text"] = "Translate this: "
 	promp.place(relx=0, rely=0.01, relwidth=0.7, relheight=0.4)
-	questionborder = Label(questions, bg="black")
-	questionborder.place(relx=0, rely=0.3, relwidth=1, relheight=0.052)
 	answarebox = Listbox(questions, bg="white", font=("Courier", 14))
 	answarebox.place(relx=0.15, rely=0.45, relwidth=0.7, relheight=0.4)
 	scrollbar = Scrollbar(answarebox)
 	scrollbar.pack(side=RIGHT, fill=Y)
 	scrollbar.config(command=answarebox.yview)
+	questionborder = Label(questions, bg="black")
+	questionborder.place(relx=0, rely=0.3, relwidth=1, relheight=0.052)
 	wordquestion = Worder(questions, "source\\esperanto-english.json", answarebox)
-	wordquestion.label.place(relx=0, rely=0.3, relwidth=0.99, relheight=0.05)
-	console = Canvas(mainpage,bg=GREEN)
+	wordquestion.label.place(relx=0, rely=0.3, relwidth=0.99, relheight=0.050)
 	console.place(relx=0, rely=0, relwidth=0.4, relheight=1.1)
 	answare = Entry(console, font=("Courier", 16))
 	answare.place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.05)
