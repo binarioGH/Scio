@@ -26,6 +26,8 @@ class Worder:
 		self.file = file
 		self.content = 0
 		self.root = root
+		self.pointc = 0
+		self.points = Label(root, bg=SILVER, font=fnt, fg=RED, text="Points: {}".format(self.pointc))
 		if open_file:
 			self.load_file()
 			if self.content:
@@ -39,6 +41,10 @@ class Worder:
 			return -1
 		else:
 			self.content = content
+
+	def update_points(self):
+		self.points["text"] = "Points: {}".format(self.pointc)
+
 	def check_translation(self, entry):
 		answare = entry.get()
 		if self.content != 0:
@@ -50,7 +56,8 @@ class Worder:
 				self.label.config(bg=SILVER)
 				self.newWord()
 				entry.delete(0, END)
-				return 1
+				self.pointc += 1
+				self.update_points()
 			else:
 				sound("source\\wrong.wav")
 				self.label.config(bg=RED)
@@ -58,6 +65,8 @@ class Worder:
 				sleep(0.4)
 				self.label.config(bg=SILVER)
 				#print(":(")
+				self.pointc -= 1
+				self.update_points()
 				return 0
 		else:
 			#print("bruh!")
@@ -77,6 +86,8 @@ class Worder:
 		self.answares.delete(0, END)
 
 	def getansw(self):
+		self.pointc -= 2
+		self.update_points()
 		self.cleanansw()
 		current = self.label["text"]
 		if type(self.content[current]) == type(""):
@@ -134,6 +145,7 @@ def main():
 	questionborder.place(relx=0, rely=0.3, relwidth=1, relheight=0.052)
 	wordquestion = Worder(questions, "source\\esperanto-english.json", answarebox)
 	wordquestion.label.place(relx=0, rely=0.3, relwidth=0.99, relheight=0.050)
+	wordquestion.points.place(relx=0.3, rely=0.9, relwidth=0.4, relheight=0.08)
 	console = Canvas(mainpage,bg=GREEN)
 	console.place(relx=0, rely=0, relwidth=0.4, relheight=1.1)
 	answare = Entry(console, font=("Courier", 16))
