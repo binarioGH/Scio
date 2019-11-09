@@ -124,13 +124,27 @@ class Worder:
 					f.write(dumps(self.content, indent=4))
 					
 
+class Dic:
+	def __init__(self, listbox):
+		self.listbox = listbox
+
 
 def main():
 	root = Tk()
 	root.title("Scio")
 	root.geometry("{}x{}".format(WIDTH, HEIGHT))
+	dictionary = Frame(root, bg=SILVER)
+	dictionary.place(relx=0,rely=0,relwidth=1,relheight=1)
 	mainpage = Frame(root, bg=GREEN)
 	mainpage.place(relx=0, rely=0, relwidth=1, relheight=1)
+	back = Button(dictionary, text="<-", bg=RED, fg="white" ,font=("Courier", 13), command=lambda: mainpage.tkraise())
+	back.place(relx=0.05, rely=0.05, relwidth=0.1, relheight=0.05)
+	words = Listbox(dictionary, bg="white", font=("Courier", 18))
+	words.place(relx=0.2, rely=0.4, relwidth=0.6, relheight=0.5)
+	wordsearcher = Entry(dictionary, font=("Courier", 18))
+	wordsearcher.place(relx=0.2, rely=0.2, relwidth=0.4, relheight=0.1)
+	search = Button(dictionary, bg=GREEN, fg="black", text="Search",command=lambda:print("OwO"))
+	search.place(relx=0.65,rely=0.22, relwidth=0.15, relheight=0.05)
 	questions = Canvas(mainpage, bg=SILVER)
 	questions.place(relx=0.3, rely=0, relwidth=0.8, relheight=1)
 	promp = Label(questions, bg=SILVER, font=("Courier", 18))
@@ -160,7 +174,9 @@ def main():
 	getans.place(relx=0.5, rely=0.24, relwidth=0.3, relheight=0.05)
 	newans = Button(console, text="Add Answare", font=("Courier", 18), command=lambda: wordquestion.addNewAnsware(answare.get()))
 	newans.place(relx=0.1, rely=0.75, relwidth=0.7, relheight=0.05)
-	delans = Button(console, text="Delete Answare", font = ("Courier", 16), command=lambda: wordquestion.addNewAnsware(answare.get(), True))
+	searchw = Button(console, bg=RED, fg="white",text="Search a word", font=("Courier", 14), command=lambda:dictionary.tkraise())
+	searchw.place(relx=0.1, rely=0.31, relwidth=0.7, relheight=0.05)
+	delans = Button(console, text="Delete Answare", font = ("Courier", 18), command=lambda: wordquestion.addNewAnsware(answare.get(), True))
 	delans.place(relx=0.1, rely=0.83, relwidth=0.7, relheight=0.05)
 	root.mainloop()
 
