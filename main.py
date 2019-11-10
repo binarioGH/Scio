@@ -28,6 +28,7 @@ class Worder:
 		self.root = root
 		self.pointc = 0
 		self.points = Label(root, bg=SILVER, font=fnt, fg=RED, text="Points: {}".format(self.pointc))
+		#self.dictionary = 0
 		if open_file:
 			self.load_file()
 			if self.content:
@@ -82,19 +83,25 @@ class Worder:
 		#print("uwu")
 		self.label.config(text=newword)		
 
-	def cleanansw(self):
-		self.answares.delete(0, END)
+	def cleanansw(self, lst=-1):
+		if lst == -1 :
+			lst = self.answares
+		lst.delete(0, END)
 
-	def getansw(self):
+	def getansw(self, lst=-1, word=-1):
+		if lst == -1:
+			lst = self.answares
+		if word == -1:
+			word = self.label["text"]
 		self.pointc -= 2
 		self.update_points()
-		self.cleanansw()
-		current = self.label["text"]
+		self.cleanansw(lst)
+		current = word
 		if type(self.content[current]) == type(""):
-			self.answares.insert(END, word)
+			lst.insert(END, word)
 		else:
 			for word in self.content[current]:
-				self.answares.insert(END, "    {}".format(word.title()))
+				lst.insert(END, "    {}".format(word.title()))
 	def addNewAnsware(self, ans, delete=False):
 		word = self.label["text"]
 		if self.content:
@@ -122,11 +129,8 @@ class Worder:
 				self.root.update()
 				with open(self.file, "w", encoding="utf-8") as f:
 					f.write(dumps(self.content, indent=4))
-					
 
-class Dic:
-	def __init__(self, listbox):
-		self.listbox = listbox
+
 
 
 def main():
@@ -139,12 +143,6 @@ def main():
 	mainpage.place(relx=0, rely=0, relwidth=1, relheight=1)
 	back = Button(dictionary, text="<-", bg=RED, fg="white" ,font=("Courier", 13), command=lambda: mainpage.tkraise())
 	back.place(relx=0.05, rely=0.05, relwidth=0.1, relheight=0.05)
-	words = Listbox(dictionary, bg="white", font=("Courier", 18))
-	words.place(relx=0.2, rely=0.4, relwidth=0.6, relheight=0.5)
-	wordsearcher = Entry(dictionary, font=("Courier", 18))
-	wordsearcher.place(relx=0.2, rely=0.2, relwidth=0.4, relheight=0.1)
-	search = Button(dictionary, bg=GREEN, fg="black", text="Search",command=lambda:print("OwO"))
-	search.place(relx=0.65,rely=0.22, relwidth=0.15, relheight=0.05)
 	questions = Canvas(mainpage, bg=SILVER)
 	questions.place(relx=0.3, rely=0, relwidth=0.8, relheight=1)
 	promp = Label(questions, bg=SILVER, font=("Courier", 18))
@@ -158,6 +156,17 @@ def main():
 	questionborder = Label(questions, bg="black")
 	questionborder.place(relx=0, rely=0.3, relwidth=1, relheight=0.052)
 	wordquestion = Worder(questions, "source\\esperanto-english.json", answarebox)
+	words = Listbox(dictionary, bg="white", font=("Courier", 18))
+	words.place(relx=0.2, rely=0.4, relwidth=0.6, relheight=0.5)
+	dicscroll = Scrollbar(words)
+	dicscroll.pack(side=RIGHT, fill=Y)
+	dicscroll.config(command=words.yview)
+	wordsearcher = Entry(dictionary, font=("Courier", 18))
+	wordsearcher.place(relx=0.2, rely=0.2, relwidth=0.4, relheight=0.1)
+	search = Button(dictionary, bg=GREEN, fg="black", text="Search",command=lambda:wordquestion.getansw(words, wordsearcher.get()))
+	search.place(relx=0.65,rely=0.22, relwidth=0.15, relheight=0.05)
+	
+	#wordquestion.dictionary = words
 	wordquestion.label.place(relx=0, rely=0.3, relwidth=0.99, relheight=0.050)
 	wordquestion.points.place(relx=0.3, rely=0.9, relwidth=0.4, relheight=0.08)
 	console = Canvas(mainpage,bg=GREEN)
