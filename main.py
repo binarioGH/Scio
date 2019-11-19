@@ -88,12 +88,16 @@ class Worder:
 			lst = self.answares
 		lst.delete(0, END)
 
-	def getansw(self, lst=-1, word=-1):
+	def getansw(self, lst=-1, word=-1, searching=False):
 		if lst == -1:
 			lst = self.answares
 		if word == -1:
 			word = self.label["text"]
-		self.pointc -= 2
+		word = word.lower()
+		word = word.strip()
+		if searching:
+			if word == self.label["text"]:
+				self.pointc -= 2
 		self.update_points()
 		self.cleanansw(lst)
 		current = word
@@ -163,12 +167,14 @@ def main():
 	dicscroll.config(command=words.yview)
 	wordsearcher = Entry(dictionary, font=("Courier", 18))
 	wordsearcher.place(relx=0.2, rely=0.2, relwidth=0.4, relheight=0.1)
-	search = Button(dictionary, bg=GREEN, fg="black", text="Search",command=lambda:wordquestion.getansw(words, wordsearcher.get()))
+	search = Button(dictionary, bg=GREEN, fg="black", text="Search",command=lambda:wordquestion.getansw(words, wordsearcher.get(), True))
 	search.place(relx=0.65,rely=0.22, relwidth=0.15, relheight=0.05)
 	
 	#wordquestion.dictionary = words
 	wordquestion.label.place(relx=0, rely=0.3, relwidth=0.99, relheight=0.050)
 	wordquestion.points.place(relx=0.3, rely=0.9, relwidth=0.4, relheight=0.08)
+	#change_json = Button(questions, text="...", command=lambda:print("uwu"))
+	#change_json.place(relx=0.75, rely=0.9, relwidth=0.1, relheight=0.08)
 	console = Canvas(mainpage,bg=GREEN)
 	console.place(relx=0, rely=0, relwidth=0.4, relheight=1.1)
 	answare = Entry(console, font=("Courier", 16))
