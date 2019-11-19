@@ -34,9 +34,11 @@ class Worder:
 			if self.content:
 				self.wordlist = list(self.content)
 				self.newWord()
-	def load_file(self):
+	def load_file(self, file=-1):
+		if file == -1:
+			file = self.file
 		try:
-			with copen(self.file, "r", encoding="utf-8") as f:
+			with copen(file, "r", encoding="utf-8") as f:
 				content = loads(f.read())
 		except Exception as e: 
 			return -1
@@ -141,6 +143,8 @@ def main():
 	root = Tk()
 	root.title("Scio")
 	root.geometry("{}x{}".format(WIDTH, HEIGHT))
+	change_json = Frame(root, bg=SILVER)
+	change_json.place(relx=0,rely=0,relwidth=1, relheight=1)
 	dictionary = Frame(root, bg=SILVER)
 	dictionary.place(relx=0,rely=0,relwidth=1,relheight=1)
 	mainpage = Frame(root, bg=GREEN)
@@ -173,8 +177,6 @@ def main():
 	#wordquestion.dictionary = words
 	wordquestion.label.place(relx=0, rely=0.3, relwidth=0.99, relheight=0.050)
 	wordquestion.points.place(relx=0.3, rely=0.9, relwidth=0.4, relheight=0.08)
-	#change_json = Button(questions, text="...", command=lambda:print("uwu"))
-	#change_json.place(relx=0.75, rely=0.9, relwidth=0.1, relheight=0.08)
 	console = Canvas(mainpage,bg=GREEN)
 	console.place(relx=0, rely=0, relwidth=0.4, relheight=1.1)
 	answare = Entry(console, font=("Courier", 16))
@@ -193,6 +195,14 @@ def main():
 	searchw.place(relx=0.1, rely=0.31, relwidth=0.7, relheight=0.05)
 	delans = Button(console, text="Delete Answare", font = ("Courier", 18), command=lambda: wordquestion.addNewAnsware(answare.get(), True))
 	delans.place(relx=0.1, rely=0.83, relwidth=0.7, relheight=0.05)
+	change_jsonb = Button(questions, text="...", command=lambda:change_json.tkraise())
+	change_jsonb.place(relx=0.75, rely=0.9, relwidth=0.1, relheight=0.08)
+	jback = Button(change_json, bg=RED, fg="white", font=("Courier", 18), text="<-", command=lambda: mainpage.tkraise())
+	jback.place(relx=0.05, rely=0.05, relwidth=0.05, relheight=0.05)
+	search_file = Entry(change_json, font=("Courier", 18))
+	search_file.place(relx=0.25, rely=0.45, relwidth=0.4, relheight=0.1)
+	ssearch = Button(change_json, font=("Courier", 18), text="Change!", bg=RED, fg="white", command=lambda:wordquestion.load_file(search_file.get()))
+	ssearch.place(relx=0.65, rely=0.45, relwidth=0.16, relheight=0.1)
 	root.mainloop()
 
 
