@@ -36,7 +36,7 @@ class Worder:
 				if len(self.wordlist) == 0:
 					self.wordlist = list(self.content)
 				self.newWord()
-	def load_file(self, file=-1, changing=False, label="", create_wordlist=False):
+	def load_file(self, file=-1, changing=False, label="", create_wordlist=False, border=""):
 		if file == -1:
 			file = self.file
 		try:
@@ -46,6 +46,11 @@ class Worder:
 			if changing:
 				label.config(fg=RED)
 				sound("source\\wrong.wav")
+				if border != "":
+					border.config(bg=RED)
+					self.root.update()
+					sleep(0.2)
+					border.config(bg="black")
 				label["text"] = "The file {} wasn't found.".format(file)
 				#print("Works")
 			return -1
@@ -53,7 +58,12 @@ class Worder:
 			if create_wordlist:
 				self.wordlist = list(self.content)
 			if changing:
-				sound("source\\correct.wav")
+				if border != "":
+					border.config(bg=GREEN)
+					self.root.update()
+					sound("source\\correct.wav")
+					sleep(0.2)
+					border.config(bg="black")
 				label.config(fg="black")
 				label["text"] = "File {} loaded correctly.".format(file)
 			self.content = content
@@ -218,7 +228,7 @@ def main():
 	errorLabel = Label(change_json, font=("Courier", 12), bg=SILVER, fg=RED, text="")
 	errorLabel.place(relx=0, rely=0.6, relwidth=1, relheight=0.14)	
 	search_file.place(relx=0.25, rely=0.45, relwidth=0.4, relheight=0.1)
-	ssearch = Button(change_json, font=("Courier", 18), text="Change!", bg=RED, fg="white", command=lambda:wordquestion.load_file(search_file.get(), True, errorLabel, True))
+	ssearch = Button(change_json, font=("Courier", 18), text="Change!", bg=RED, fg="white", command=lambda:wordquestion.load_file(search_file.get(), True, errorLabel, True, sborder))
 	ssearch.place(relx=0.65, rely=0.45, relwidth=0.16, relheight=0.1)
 	root.mainloop()
 
