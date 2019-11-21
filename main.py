@@ -29,12 +29,14 @@ class Worder:
 		self.pointc = 0
 		self.points = Label(root, bg=SILVER, font=fnt, fg=RED, text="Points: {}".format(self.pointc))
 		#self.dictionary = 0
+		self.wordlist = []
 		if open_file:
 			self.load_file()
 			if self.content:
-				self.wordlist = list(self.content)
+				if len(self.wordlist) == 0:
+					self.wordlist = list(self.content)
 				self.newWord()
-	def load_file(self, file=-1, changing=False, label=""):
+	def load_file(self, file=-1, changing=False, label="", create_wordlist=False):
 		if file == -1:
 			file = self.file
 		try:
@@ -42,12 +44,18 @@ class Worder:
 				content = loads(f.read())
 		except Exception as e: 
 			if changing:
+				label.config(fg=RED)
+				sound("source\\wrong.wav")
 				label["text"] = "The file {} wasn't found.".format(file)
 				#print("Works")
 			return -1
 		else:
+			if create_wordlist:
+				self.wordlist = list(self.content)
 			if changing:
-				label["text"] = ""
+				sound("source\\correct.wav")
+				label.config(fg="black")
+				label["text"] = "File {} loaded correctly.".format(file)
 			self.content = content
 
 	def update_points(self):
@@ -207,10 +215,10 @@ def main():
 	sborder = Label(change_json, bg="black")
 	sborder.place(relx=0.24, rely=0.43, relwidth=0.58, relheight=0.14)
 	search_file = Entry(change_json, font=("Courier", 18))
-	errorLabel = Label(change_json, font=("Courier", 18), bg=SILVER, fg=RED, text="")
-	errorLabel.place(relx=0.24, rely=0.6, relwidth=0.58, relheight=0.14)	
+	errorLabel = Label(change_json, font=("Courier", 12), bg=SILVER, fg=RED, text="")
+	errorLabel.place(relx=0, rely=0.6, relwidth=1, relheight=0.14)	
 	search_file.place(relx=0.25, rely=0.45, relwidth=0.4, relheight=0.1)
-	ssearch = Button(change_json, font=("Courier", 18), text="Change!", bg=RED, fg="white", command=lambda:wordquestion.load_file(search_file.get(), True, errorLabel))
+	ssearch = Button(change_json, font=("Courier", 18), text="Change!", bg=RED, fg="white", command=lambda:wordquestion.load_file(search_file.get(), True, errorLabel, True))
 	ssearch.place(relx=0.65, rely=0.45, relwidth=0.16, relheight=0.1)
 	root.mainloop()
 
