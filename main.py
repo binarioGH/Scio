@@ -36,7 +36,7 @@ class Worder:
 				if len(self.wordlist) == 0:
 					self.wordlist = list(self.content)
 				self.newWord()
-	def load_file(self, file=-1, changing=False, label="", create_wordlist=False, border=""):
+	def load_file(self, file=-1, changing=False, label="", border=""):
 		if file == -1:
 			file = self.file
 		try:
@@ -55,7 +55,8 @@ class Worder:
 				#print("Works")
 			return -1
 		else:
-			if create_wordlist:
+			self.content = content
+			if type(self.content) != type(1):
 				self.wordlist = list(self.content)
 			if changing:
 				if border != "":
@@ -66,7 +67,8 @@ class Worder:
 					border.config(bg="black")
 				label.config(fg="black")
 				label["text"] = "File {} loaded correctly.".format(file)
-			self.content = content
+				self.newWord()
+			
 
 	def update_points(self):
 		self.points["text"] = "Points: {}".format(self.pointc)
@@ -224,11 +226,14 @@ def main():
 	jback.place(relx=0.05, rely=0.05, relwidth=0.05, relheight=0.05)
 	sborder = Label(change_json, bg="black")
 	sborder.place(relx=0.24, rely=0.43, relwidth=0.58, relheight=0.14)
+	disclaim = Label(change_json, font=("Courier", 14), text="Write the path of the new file:", bg=SILVER, fg="black", anchor="w")
+	disclaim.place(relx=0.24, rely=0.3, relwidth=0.5, relheight=0.1)
 	search_file = Entry(change_json, font=("Courier", 18))
+	search_file.place(relx=0.25, rely=0.45, relwidth=0.4, relheight=0.1)
 	errorLabel = Label(change_json, font=("Courier", 12), bg=SILVER, fg=RED, text="")
 	errorLabel.place(relx=0, rely=0.6, relwidth=1, relheight=0.14)	
-	search_file.place(relx=0.25, rely=0.45, relwidth=0.4, relheight=0.1)
-	ssearch = Button(change_json, font=("Courier", 18), text="Change!", bg=RED, fg="white", command=lambda:wordquestion.load_file(search_file.get(), True, errorLabel, True, sborder))
+
+	ssearch = Button(change_json, font=("Courier", 18), text="Change!", bg=RED, fg="white", command=lambda:wordquestion.load_file(search_file.get(), True, errorLabel, sborder))
 	ssearch.place(relx=0.65, rely=0.45, relwidth=0.16, relheight=0.1)
 	root.mainloop()
 
