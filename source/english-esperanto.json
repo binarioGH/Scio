@@ -2152,9 +2152,6 @@
     "acetifying": [
         "acetigo"
     ],
-    "acetyl-": [
-        "acetil-"
-    ],
     "acetyl": [
         "acetila",
         "acetilo"
@@ -3019,9 +3016,6 @@
     "gland": [
         "adeno",
         "glando"
-    ],
-    "ade-": [
-        "adeno"
     ],
     "adenoids": [
         "adenoida\u0135oj",
@@ -5828,9 +5822,6 @@
         "afrito",
         "efrito"
     ],
-    "afro-": [
-        "afro-"
-    ],
     "aphrodite": [
         "Afrodita",
         "Afrodito",
@@ -6842,9 +6833,6 @@
         "agrikultura",
         "agrokultura",
         "agronomia"
-    ],
-    "farm-": [
-        "agrara"
     ],
     "aggregate": [
         "agrega",
@@ -17130,9 +17118,6 @@
         "anasino",
         "anaso"
     ],
-    "duck-": [
-        "anasa"
-    ],
     "duck\u2019s": [
         "anasa"
     ],
@@ -18997,9 +18982,6 @@
     ],
     "one year ago": [
         "anta\u016d unu jaro"
-    ],
-    "fore-": [
-        "anta\u016d-"
     ],
     "front derailleur": [
         "anta\u016d-elreligilo",
@@ -44262,9 +44244,6 @@
         "cerva",
         "cervo"
     ],
-    "deer-": [
-        "cerva"
-    ],
     "of a deer": [
         "cerva"
     ],
@@ -46528,12 +46507,6 @@
     "to attend a party": [
         "\u0109eesti festenon"
     ],
-    "arch-": [
-        "\u0109ef-"
-    ],
-    "chief-": [
-        "\u0109ef-"
-    ],
     "main": [
         "\u0109efa",
         "precipa"
@@ -47619,9 +47592,6 @@
     "horse": [
         "\u0109evala",
         "\u0109evalo"
-    ],
-    "horse-": [
-        "\u0109evala"
     ],
     "of a horse": [
         "\u0109evala"
@@ -59918,9 +59888,6 @@
         "dom-",
         "malsova\u011di\u011di"
     ],
-    "house-": [
-        "dom-"
-    ],
     "domestic": [
         "doma",
         "enlanda",
@@ -65594,10 +65561,6 @@
         "posttempa",
         "tarda"
     ],
-    "ex-": [
-        "eks-",
-        "eksa"
-    ],
     "to dart off": [
         "eksagi"
     ],
@@ -67295,9 +67258,6 @@
     ],
     "e.g.": [
         "ekz."
-    ],
-    "exa-": [
-        "ekza-"
     ],
     "disk image": [
         "ekzakta kopio de disko"
@@ -116804,9 +116764,6 @@
     "to contract a loan": [
         "kontrakti prunton"
     ],
-    "job-": [
-        "kontraktita"
-    ],
     "contract": [
         "kontrakto"
     ],
@@ -117224,9 +117181,6 @@
     ],
     "counter-revolution": [
         "kontra\u016drevolucio"
-    ],
-    "anti-": [
-        "kontra\u016drusa"
     ],
     "misinterpretation": [
         "kontra\u016dsenco",
@@ -121269,9 +121223,6 @@
     "versioned": [
         "kun versikontrolo"
     ],
-    "co-": [
-        "kun-"
-    ],
     "fellow": [
         "kun-",
         "ulo"
@@ -123054,9 +123005,6 @@
         "la\u016d\u015dajna",
         "\u015dajna",
         "ver\u015dajna"
-    ],
-    "quasi-": [
-        "kvaza\u016da"
     ],
     "demure": [
         "kvaza\u016d\u0109asta",
@@ -125253,9 +125201,6 @@
         "simila"
     ],
     "like; transverse": [
-        "la\u016da"
-    ],
-    "cross-": [
         "la\u016da"
     ],
     "looking like": [
@@ -143450,11 +143395,6 @@
     "mulrany": [
         "Mulranio"
     ],
-    "multi-": [
-        "mult-",
-        "plur",
-        "plur-"
-    ],
     "a lot of": [
         "multa",
         "multe da"
@@ -145364,26 +145304,6 @@
     ],
     "don\u2019t worry": [
         "Ne zorgu vi"
-    ],
-    "not-": [
-        "ne-"
-    ],
-    "un-": [
-        "ne-",
-        "ne-",
-        "sen-"
-    ],
-    "dis-": [
-        "ne-"
-    ],
-    "il-": [
-        "ne-"
-    ],
-    "im-": [
-        "ne-"
-    ],
-    "in-": [
-        "ne-"
     ],
     "nand-operation": [
         "ne-kaj-operacio"
@@ -159887,9 +159807,6 @@
     "poly": [
         "plur"
     ],
-    "poly-": [
-        "plur-"
-    ],
     "many-to-many": [
         "plur-al-plura",
         "plurplura"
@@ -167911,9 +167828,6 @@
     ],
     "shaving brush": [
         "razpeniko"
-    ],
-    "re-": [
-        "re-"
     ],
     "cd-rw": [
         "re-registrebla k-disko",
@@ -191381,9 +191295,6 @@
     "taekwondo": [
         "tekvondo"
     ],
-    "tele-": [
-        "tele-"
-    ],
     "teleautograph": [
         "telea\u016dtografo"
     ],
@@ -200941,9 +200852,6 @@
     ],
     "viburnum": [
         "viburno"
-    ],
-    "vice-": [
-        "vic-"
     ],
     "row height": [
         "vica alto"
