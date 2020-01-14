@@ -436,5 +436,265 @@
     ],
     "pi": [
         "of"
+    ],
+    "pilin": [
+        "heart",
+        "feeling",
+        "emotion"
+    ],
+    "pimeja": [
+        "black",
+        "dark",
+        "unlit"
+    ],
+    "pini": [
+        "ago",
+        "completed",
+        "ended",
+        "finished",
+        "past"
+    ],
+    "pipi": [
+        "bug",
+        "insect",
+        "ant",
+        "spider"
+    ],
+    "poka": [
+        "hip",
+        "side",
+        "nexto",
+        "nearby",
+        "vicinity"
+    ],
+    "poki": [
+        "container",
+        "bag",
+        "bowl",
+        "box",
+        "cup",
+        "cupboard",
+        "drawer",
+        "vessel"
+    ],
+    "pona": [
+        "good",
+        "positive",
+        "useful",
+        "friendly",
+        "peaceful",
+        "simple"
+    ],
+    "pu": [
+        "interacting-with-the-official-toki-pona-book"
+    ],
+    "sama": [
+        "same",
+        "similar",
+        "sibling",
+        "peer",
+        "fellow"
+    ],
+    "seli": [
+        "fire",
+        "cooking",
+        "chemical",
+        "heat",
+        "source"
+    ],
+    "selo": [
+        "bark",
+        "peel",
+        "shell",
+        "skin",
+        "boundary"
+    ],
+    "seme": [
+        "what",
+        "which"
+    ],
+    "sewi": [
+        "above",
+        "high",
+        "elevated"
+    ],
+    "sijelo": [
+        "body",
+        "torso"
+    ],
+    "sike": [
+        "round",
+        "circular",
+        "ball",
+        "circle",
+        "cycle",
+        "sphere",
+        "wheel"
+    ],
+    "sin": [
+        "new",
+        "fresh",
+        "additional",
+        "another",
+        "extra"
+    ],
+    "namako": [
+        "new",
+        "fresh",
+        "additional",
+        "another",
+        "extra"
+    ],
+    "sina": [
+        "you"
+    ],
+    "sinpin": [
+        "face",
+        "foremost",
+        "front",
+        "wall"
+    ],
+    "sitelen": [
+        "image",
+        "picture",
+        "representation",
+        "symbol",
+        "mark",
+        "writing"
+    ],
+    "sona": [
+        "know",
+        "wise",
+        "information",
+        "skilled"
+    ],
+    "soweli": [
+        "animal",
+        "beast"
+    ],
+    "suli": [
+        "big",
+        "heavy",
+        "large",
+        "long",
+        "tall",
+        "important",
+        "adult"
+    ],
+    "suno": [
+        "sun",
+        "bright",
+        "light",
+        "glow",
+        "radiance"
+    ],
+    "supa": [
+        "horizontal"
+    ],
+    "suwi": [
+        "sweet",
+        "fragrant",
+        "cute",
+        "innocent",
+        "adorable"
+    ],
+    "tan": [
+        "by",
+        "from",
+        "because"
+    ],
+    "taso": [
+        "but",
+        "however",
+        "only"
+    ],
+    "tawa": [
+        "going",
+        "toward",
+        "moving"
+    ],
+    "telo": [
+        "water",
+        "liquid",
+        "fluid",
+        "wet",
+        "beverage"
+    ],
+    "tenpo": [
+        "time",
+        "duration",
+        "moment",
+        "occasion",
+        "period",
+        "situation"
+    ],
+    "toki": [
+        "hello",
+        "communicate",
+        "say",
+        "speak",
+        "talk",
+        "language",
+        "think"
+    ],
+    "tomo": [
+        "indoor",
+        "building",
+        "home",
+        "house",
+        "room"
+    ],
+    "tu": [
+        "two"
+    ],
+    "unpa": [
+        "relations"
+    ],
+    "uta": [
+        "mouth",
+        "lips",
+        "oral",
+        "cavity",
+        "jaw"
+    ],
+    "utala": [
+        "battle",
+        "challenge",
+        "compete",
+        "struggle"
+    ],
+    "walo": [
+        "white",
+        "whitish",
+        "pale"
+    ],
+    "wan": [
+        "unique",
+        "nited"
+    ],
+    "waso": [
+        "bird",
+        "winged"
+    ],
+    "wawa": [
+        "strong",
+        "powerful",
+        "confident",
+        "sure",
+        "energetic",
+        "intense"
+    ],
+    "weka": [
+        "absent",
+        "away",
+        "ignored"
+    ],
+    "wile": [
+        "must",
+        "need",
+        "require",
+        "should",
+        "want",
+        "wish"
     ]
 }
