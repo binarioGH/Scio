@@ -334,7 +334,8 @@
         "entertaining",
         "frivolous",
         "playful",
-        "recreational"
+        "recreational",
+        "art"
     ],
     "mute": [
         "many",
@@ -352,7 +353,8 @@
         "drunk",
         "intoxicated",
         "fool",
-        "dumb"
+        "dumb",
+        "stupid"
     ],
     "nena": [
         "bump",
@@ -427,7 +429,7 @@
         "pasta"
     ],
     "pana": [
-        "givve",
+        "give",
         "send",
         "emit",
         "provide",
