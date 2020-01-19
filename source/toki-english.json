@@ -1,702 +1,705 @@
 {
-    "akesi": [
-        "reptile",
-        "amphibian"
-    ],
-    "ala": [
-        "no",
-        "not",
-        "zero"
-    ],
-    "alasa": [
-        "hunt",
-        "forage"
-    ],
-    "ale": [
-        "many",
-        "countless",
-        "every",
-        "plentiful",
-        "abundance",
-        "everything",
-        "life",
-        "universe",
-        "all"
-    ],
-    "ali": [
-        "many",
-        "countless",
-        "every",
-        "plentiful",
-        "abundance",
-        "everything",
-        "life",
-        "universe",
-        "all"
-    ],
-    "anpa": [
-        "downward",
-        "humble",
-        "lowly",
-        "dependent"
-    ],
-    "ante": [
-        "different",
-        "altered",
-        "changed",
-        "other"
-    ],
-    "anu": [
-        "or"
-    ],
-    "awen": [
-        "enduring",
-        "kept",
-        "protected",
-        "safe",
-        "waiting",
-        "staying"
-    ],
-    "esun": [
-        "market",
-        "shop",
-        "fair",
-        "bazaar",
-        "business"
-    ],
-    "ijo": [
-        "thing",
-        "phenomenon",
-        "object",
-        "matter"
-    ],
-    "ike": [
-        "bad",
-        "negative",
-        "irrelevant"
-    ],
-    "ilo": [
-        "tool",
-        "implement",
-        "machine",
-        "device"
-    ],
-    "insa": [
-        "centre",
-        "content",
-        "insside",
-        "between",
-        "stomach"
-    ],
-    "jaki": [
-        "disgusting",
-        "obscene",
-        "sickly",
-        "toxic",
-        "unclean",
-        "unsanitary"
-    ],
-    "jan": [
-        "human",
-        "person",
-        "somebody"
-    ],
-    "jelo": [
-        "yellow",
-        "yellowish"
-    ],
-    "jo": [
-        "have",
-        "carry",
-        "contain",
-        "hold"
-    ],
-    "kala": [
-        "fish",
-        "marine",
-        "sea-creature"
-    ],
-    "kalama": [
-        "recite",
-        "utter-aloud"
-    ],
-    "kama": [
-        "arriving",
-        "coming",
-        "future",
-        "summoned",
-        "manage-to"
-    ],
-    "kasi": [
-        "plant",
-        "vegetation",
-        "herb",
-        "leaf"
-    ],
-    "ken": [
-        "able",
-        "allowed",
-        "can",
-        "possible"
-    ],
-    "kepeken": [
-        "use"
-    ],
-    "kili": [
-        "fruit",
-        "vegetable",
-        "mushroom"
-    ],
-    "kiwen": [
-        "hard",
-        "metal",
-        "rock",
-        "stone"
-    ],
-    "ko": [
-        "clay",
-        "clinging",
-        "form",
-        "dough",
-        "semi-solid",
-        "paste",
-        "powder"
-    ],
-    "kon": [
-        "air",
-        "breth",
-        "essence",
-        "spirit",
-        "hidden",
-        "reality",
-        "unseen"
-    ],
-    "kule": [
-        "colourful",
-        "pigmented",
-        "painted"
-    ],
-    "kulupu": [
-        "community",
-        "company",
-        "society",
-        "group",
-        "nation",
-        "tribe"
-    ],
-    "kute": [
-        "ear"
-    ],
-    "lape": [
-        "sleeping",
-        "resting"
-    ],
-    "laso": [
-        "blue",
-        "green"
-    ],
-    "lawa": [
-        "head",
-        "mind"
-    ],
-    "len": [
-        "cloth",
-        "clothing",
-        "fabric",
-        "textile",
-        "cover"
-    ],
-    "lete": [
-        "cold",
-        "cool",
-        "uncooked",
-        "raw"
-    ],
-    "lili": [
-        "little",
-        "small",
-        "short",
-        "few",
-        "young"
-    ],
-    "linja": [
-        "cord",
-        "hair",
-        "rope",
-        "thread",
-        "yarn"
-    ],
-    "lipu": [
-        "book",
-        "document",
-        "card",
-        "paper",
-        "record",
-        "website"
-    ],
-    "loje": [
-        "red",
-        "reddish"
-    ],
-    "lon": [
-        "real",
-        "true",
-        "existing"
-    ],
-    "luka": [
-        "arm",
-        "hand",
-        "tactile",
-        "organ",
-        "five"
-    ],
-    "lukin": [
-        "eye"
-    ],
-    "oko": [
-        "look",
-        "see",
-        "examine",
-        "observe",
-        "read",
-        "watch"
-    ],
-    "lupa": [
-        "door",
-        "hole",
-        "orifice",
-        "window"
-    ],
-    "ma": [
-        "earth",
-        "land",
-        "outdoors",
-        "world",
-        "country",
-        "territory",
-        "soil"
-    ],
-    "mama": [
-        "parent",
-        "acestor",
-        "creator",
-        "originator",
-        "caretaker",
-        "sustainer"
-    ],
-    "mani": [
-        "money",
-        "cash",
-        "savings",
-        "wealth"
-    ],
-    "meli": [
-        "woman",
-        "female",
-        "femenine",
-        "wife"
-    ],
-    "mi": [
-        "i",
-        "me",
-        "we",
-        "us"
-    ],
-    "mije": [
-        "man",
-        "male",
-        "masculine",
-        "husband"
-    ],
-    "moku": [
-        "eat",
-        "drink",
-        "consume",
-        "swallow",
-        "ingest"
-    ],
-    "moli": [
-        "dead",
-        "dying"
-    ],
-    "monsi": [
-        "back",
-        "behind",
-        "rear"
-    ],
-    "mun": [
-        "moon",
-        "night",
-        "star"
-    ],
-    "musi": [
-        "artistic",
-        "entertaining",
-        "frivolous",
-        "playful",
-        "recreational",
-        "art"
-    ],
-    "mute": [
-        "many",
-        "lot",
-        "more",
-        "much",
-        "several",
-        "very"
-    ],
-    "nasa": [
-        "unusual",
-        "strange",
-        "foolish",
-        "crazy",
-        "drunk",
-        "intoxicated",
-        "fool",
-        "dumb",
-        "stupid"
-    ],
-    "nena": [
-        "bump",
-        "button",
-        "hill",
-        "mountain",
-        "nose",
-        "protuberance"
-    ],
-    "ni": [
-        "that",
-        "this"
-    ],
-    "nimi": [
-        "name",
-        "word"
-    ],
-    "noka": [
-        "foot",
-        "leg",
-        "bottom"
-    ],
-    "o": [
-        "hey"
-    ],
-    "olin": [
-        "love",
-        "compassion",
-        "respect",
-        "affection"
-    ],
-    "ona": [
-        "he",
-        "she",
-        "it",
-        "they"
-    ],
-    "open": [
-        "begin",
-        "start",
-        "open"
-    ],
-    "pakala": [
-        "botched",
-        "broken",
-        "damaged",
-        "harmed",
-        "messed"
-    ],
-    "pali": [
-        "do",
-        "action",
-        "work",
-        "build",
-        "make",
-        "prepare"
-    ],
-    "palisa": [
-        "branch",
-        "rod",
-        "stick"
-    ],
-    "pan": [
-        "cereal",
-        "grain",
-        "barley",
-        "corn",
-        "oat",
-        "rice",
-        "wheat",
-        "bread",
-        "pasta"
-    ],
-    "pana": [
-        "give",
-        "send",
-        "emit",
-        "provide",
-        "put",
-        "release"
-    ],
-    "pi": [
-        "of"
-    ],
-    "pilin": [
-        "heart",
-        "feeling",
-        "emotion"
-    ],
-    "pimeja": [
-        "black",
-        "dark",
-        "unlit"
-    ],
-    "pini": [
-        "ago",
-        "completed",
-        "ended",
-        "finished",
-        "past"
-    ],
-    "pipi": [
-        "bug",
-        "insect",
-        "ant",
-        "spider"
-    ],
-    "poka": [
-        "hip",
-        "side",
-        "nexto",
-        "nearby",
-        "vicinity"
-    ],
-    "poki": [
-        "container",
-        "bag",
-        "bowl",
-        "box",
-        "cup",
-        "cupboard",
-        "drawer",
-        "vessel"
-    ],
-    "pona": [
-        "good",
-        "positive",
-        "useful",
-        "friendly",
-        "peaceful",
-        "simple"
-    ],
-    "pu": [
-        "interacting-with-the-official-toki-pona-book"
-    ],
-    "sama": [
-        "same",
-        "similar",
-        "sibling",
-        "peer",
-        "fellow"
-    ],
-    "seli": [
-        "fire",
-        "cooking",
-        "chemical",
-        "heat",
-        "source"
-    ],
-    "selo": [
-        "bark",
-        "peel",
-        "shell",
-        "skin",
-        "boundary"
-    ],
-    "seme": [
-        "what",
-        "which"
-    ],
-    "sewi": [
-        "above",
-        "high",
-        "elevated"
-    ],
-    "sijelo": [
-        "body",
-        "torso"
-    ],
-    "sike": [
-        "round",
-        "circular",
-        "ball",
-        "circle",
-        "cycle",
-        "sphere",
-        "wheel"
-    ],
-    "sin": [
-        "new",
-        "fresh",
-        "additional",
-        "another",
-        "extra"
-    ],
-    "namako": [
-        "new",
-        "fresh",
-        "additional",
-        "another",
-        "extra"
-    ],
-    "sina": [
-        "you"
-    ],
-    "sinpin": [
-        "face",
-        "foremost",
-        "front",
-        "wall"
-    ],
-    "sitelen": [
-        "image",
-        "picture",
-        "representation",
-        "symbol",
-        "mark",
-        "writing"
-    ],
-    "sona": [
-        "know",
-        "wise",
-        "information",
-        "skilled"
-    ],
-    "soweli": [
-        "animal",
-        "beast"
-    ],
-    "suli": [
-        "big",
-        "heavy",
-        "large",
-        "long",
-        "tall",
-        "important",
-        "adult"
-    ],
-    "suno": [
-        "sun",
-        "bright",
-        "light",
-        "glow",
-        "radiance"
-    ],
-    "supa": [
-        "horizontal"
-    ],
-    "suwi": [
-        "sweet",
-        "fragrant",
-        "cute",
-        "innocent",
-        "adorable"
-    ],
-    "tan": [
-        "by",
-        "from",
-        "because"
-    ],
-    "taso": [
-        "but",
-        "however",
-        "only"
-    ],
-    "tawa": [
-        "going",
-        "toward",
-        "moving"
-    ],
-    "telo": [
-        "water",
-        "liquid",
-        "fluid",
-        "wet",
-        "beverage"
-    ],
-    "tenpo": [
-        "time",
-        "duration",
-        "moment",
-        "occasion",
-        "period",
-        "situation"
-    ],
-    "toki": [
-        "hello",
-        "communicate",
-        "say",
-        "speak",
-        "talk",
-        "language",
-        "think"
-    ],
-    "tomo": [
-        "indoor",
-        "building",
-        "home",
-        "house",
-        "room"
-    ],
-    "tu": [
-        "two"
-    ],
-    "unpa": [
-        "relations"
-    ],
-    "uta": [
-        "mouth",
-        "lips",
-        "oral",
-        "cavity",
-        "jaw"
-    ],
-    "utala": [
-        "battle",
-        "challenge",
-        "compete",
-        "struggle"
-    ],
-    "walo": [
-        "white",
-        "whitish",
-        "pale"
-    ],
-    "wan": [
-        "unique",
-        "nited"
-    ],
-    "waso": [
-        "bird",
-        "winged"
-    ],
-    "wawa": [
-        "strong",
-        "powerful",
-        "confident",
-        "sure",
-        "energetic",
-        "intense"
-    ],
-    "weka": [
-        "absent",
-        "away",
-        "ignored"
-    ],
-    "wile": [
-        "must",
-        "need",
-        "require",
-        "should",
-        "want",
-        "wish"
-    ]
+    "Colors": {},
+    "Language": {
+        "akesi": [
+            "reptile",
+            "amphibian"
+        ],
+        "ala": [
+            "no",
+            "not",
+            "zero"
+        ],
+        "alasa": [
+            "hunt",
+            "forage"
+        ],
+        "ale": [
+            "many",
+            "countless",
+            "every",
+            "plentiful",
+            "abundance",
+            "everything",
+            "life",
+            "universe",
+            "all"
+        ],
+        "ali": [
+            "many",
+            "countless",
+            "every",
+            "plentiful",
+            "abundance",
+            "everything",
+            "life",
+            "universe",
+            "all"
+        ],
+        "anpa": [
+            "downward",
+            "humble",
+            "lowly",
+            "dependent"
+        ],
+        "ante": [
+            "different",
+            "altered",
+            "changed",
+            "other"
+        ],
+        "anu": [
+            "or"
+        ],
+        "awen": [
+            "enduring",
+            "kept",
+            "protected",
+            "safe",
+            "waiting",
+            "staying"
+        ],
+        "esun": [
+            "market",
+            "shop",
+            "fair",
+            "bazaar",
+            "business"
+        ],
+        "ijo": [
+            "thing",
+            "phenomenon",
+            "object",
+            "matter"
+        ],
+        "ike": [
+            "bad",
+            "negative",
+            "irrelevant"
+        ],
+        "ilo": [
+            "tool",
+            "implement",
+            "machine",
+            "device"
+        ],
+        "insa": [
+            "centre",
+            "content",
+            "insside",
+            "between",
+            "stomach"
+        ],
+        "jaki": [
+            "disgusting",
+            "obscene",
+            "sickly",
+            "toxic",
+            "unclean",
+            "unsanitary"
+        ],
+        "jan": [
+            "human",
+            "person",
+            "somebody"
+        ],
+        "jelo": [
+            "yellow",
+            "yellowish"
+        ],
+        "jo": [
+            "have",
+            "carry",
+            "contain",
+            "hold"
+        ],
+        "kala": [
+            "fish",
+            "marine",
+            "sea-creature"
+        ],
+        "kalama": [
+            "recite",
+            "utter-aloud"
+        ],
+        "kama": [
+            "arriving",
+            "coming",
+            "future",
+            "summoned",
+            "manage-to"
+        ],
+        "kasi": [
+            "plant",
+            "vegetation",
+            "herb",
+            "leaf"
+        ],
+        "ken": [
+            "able",
+            "allowed",
+            "can",
+            "possible"
+        ],
+        "kepeken": [
+            "use"
+        ],
+        "kili": [
+            "fruit",
+            "vegetable",
+            "mushroom"
+        ],
+        "kiwen": [
+            "hard",
+            "metal",
+            "rock",
+            "stone"
+        ],
+        "ko": [
+            "clay",
+            "clinging",
+            "form",
+            "dough",
+            "semi-solid",
+            "paste",
+            "powder"
+        ],
+        "kon": [
+            "air",
+            "breth",
+            "essence",
+            "spirit",
+            "hidden",
+            "reality",
+            "unseen"
+        ],
+        "kule": [
+            "colourful",
+            "pigmented",
+            "painted"
+        ],
+        "kulupu": [
+            "community",
+            "company",
+            "society",
+            "group",
+            "nation",
+            "tribe"
+        ],
+        "kute": [
+            "ear"
+        ],
+        "lape": [
+            "sleeping",
+            "resting"
+        ],
+        "laso": [
+            "blue",
+            "green"
+        ],
+        "lawa": [
+            "head",
+            "mind"
+        ],
+        "len": [
+            "cloth",
+            "clothing",
+            "fabric",
+            "textile",
+            "cover"
+        ],
+        "lete": [
+            "cold",
+            "cool",
+            "uncooked",
+            "raw"
+        ],
+        "lili": [
+            "little",
+            "small",
+            "short",
+            "few",
+            "young"
+        ],
+        "linja": [
+            "cord",
+            "hair",
+            "rope",
+            "thread",
+            "yarn"
+        ],
+        "lipu": [
+            "book",
+            "document",
+            "card",
+            "paper",
+            "record",
+            "website"
+        ],
+        "loje": [
+            "red",
+            "reddish"
+        ],
+        "lon": [
+            "real",
+            "true",
+            "existing"
+        ],
+        "luka": [
+            "arm",
+            "hand",
+            "tactile",
+            "organ",
+            "five"
+        ],
+        "lukin": [
+            "eye"
+        ],
+        "oko": [
+            "look",
+            "see",
+            "examine",
+            "observe",
+            "read",
+            "watch"
+        ],
+        "lupa": [
+            "door",
+            "hole",
+            "orifice",
+            "window"
+        ],
+        "ma": [
+            "earth",
+            "land",
+            "outdoors",
+            "world",
+            "country",
+            "territory",
+            "soil"
+        ],
+        "mama": [
+            "parent",
+            "acestor",
+            "creator",
+            "originator",
+            "caretaker",
+            "sustainer"
+        ],
+        "mani": [
+            "money",
+            "cash",
+            "savings",
+            "wealth"
+        ],
+        "meli": [
+            "woman",
+            "female",
+            "femenine",
+            "wife"
+        ],
+        "mi": [
+            "i",
+            "me",
+            "we",
+            "us"
+        ],
+        "mije": [
+            "man",
+            "male",
+            "masculine",
+            "husband"
+        ],
+        "moku": [
+            "eat",
+            "drink",
+            "consume",
+            "swallow",
+            "ingest"
+        ],
+        "moli": [
+            "dead",
+            "dying"
+        ],
+        "monsi": [
+            "back",
+            "behind",
+            "rear"
+        ],
+        "mun": [
+            "moon",
+            "night",
+            "star"
+        ],
+        "musi": [
+            "artistic",
+            "entertaining",
+            "frivolous",
+            "playful",
+            "recreational",
+            "art"
+        ],
+        "mute": [
+            "many",
+            "lot",
+            "more",
+            "much",
+            "several",
+            "very"
+        ],
+        "nasa": [
+            "unusual",
+            "strange",
+            "foolish",
+            "crazy",
+            "drunk",
+            "intoxicated",
+            "fool",
+            "dumb",
+            "stupid"
+        ],
+        "nena": [
+            "bump",
+            "button",
+            "hill",
+            "mountain",
+            "nose",
+            "protuberance"
+        ],
+        "ni": [
+            "that",
+            "this"
+        ],
+        "nimi": [
+            "name",
+            "word"
+        ],
+        "noka": [
+            "foot",
+            "leg",
+            "bottom"
+        ],
+        "o": [
+            "hey"
+        ],
+        "olin": [
+            "love",
+            "compassion",
+            "respect",
+            "affection"
+        ],
+        "ona": [
+            "he",
+            "she",
+            "it",
+            "they"
+        ],
+        "open": [
+            "begin",
+            "start",
+            "open"
+        ],
+        "pakala": [
+            "botched",
+            "broken",
+            "damaged",
+            "harmed",
+            "messed"
+        ],
+        "pali": [
+            "do",
+            "action",
+            "work",
+            "build",
+            "make",
+            "prepare"
+        ],
+        "palisa": [
+            "branch",
+            "rod",
+            "stick"
+        ],
+        "pan": [
+            "cereal",
+            "grain",
+            "barley",
+            "corn",
+            "oat",
+            "rice",
+            "wheat",
+            "bread",
+            "pasta"
+        ],
+        "pana": [
+            "give",
+            "send",
+            "emit",
+            "provide",
+            "put",
+            "release"
+        ],
+        "pi": [
+            "of"
+        ],
+        "pilin": [
+            "heart",
+            "feeling",
+            "emotion"
+        ],
+        "pimeja": [
+            "black",
+            "dark",
+            "unlit"
+        ],
+        "pini": [
+            "ago",
+            "completed",
+            "ended",
+            "finished",
+            "past"
+        ],
+        "pipi": [
+            "bug",
+            "insect",
+            "ant",
+            "spider"
+        ],
+        "poka": [
+            "hip",
+            "side",
+            "nexto",
+            "nearby",
+            "vicinity"
+        ],
+        "poki": [
+            "container",
+            "bag",
+            "bowl",
+            "box",
+            "cup",
+            "cupboard",
+            "drawer",
+            "vessel"
+        ],
+        "pona": [
+            "good",
+            "positive",
+            "useful",
+            "friendly",
+            "peaceful",
+            "simple"
+        ],
+        "pu": [
+            "interacting-with-the-official-toki-pona-book"
+        ],
+        "sama": [
+            "same",
+            "similar",
+            "sibling",
+            "peer",
+            "fellow"
+        ],
+        "seli": [
+            "fire",
+            "cooking",
+            "chemical",
+            "heat",
+            "source"
+        ],
+        "selo": [
+            "bark",
+            "peel",
+            "shell",
+            "skin",
+            "boundary"
+        ],
+        "seme": [
+            "what",
+            "which"
+        ],
+        "sewi": [
+            "above",
+            "high",
+            "elevated"
+        ],
+        "sijelo": [
+            "body",
+            "torso"
+        ],
+        "sike": [
+            "round",
+            "circular",
+            "ball",
+            "circle",
+            "cycle",
+            "sphere",
+            "wheel"
+        ],
+        "sin": [
+            "new",
+            "fresh",
+            "additional",
+            "another",
+            "extra"
+        ],
+        "namako": [
+            "new",
+            "fresh",
+            "additional",
+            "another",
+            "extra"
+        ],
+        "sina": [
+            "you"
+        ],
+        "sinpin": [
+            "face",
+            "foremost",
+            "front",
+            "wall"
+        ],
+        "sitelen": [
+            "image",
+            "picture",
+            "representation",
+            "symbol",
+            "mark",
+            "writing"
+        ],
+        "sona": [
+            "know",
+            "wise",
+            "information",
+            "skilled"
+        ],
+        "soweli": [
+            "animal",
+            "beast"
+        ],
+        "suli": [
+            "big",
+            "heavy",
+            "large",
+            "long",
+            "tall",
+            "important",
+            "adult"
+        ],
+        "suno": [
+            "sun",
+            "bright",
+            "light",
+            "glow",
+            "radiance"
+        ],
+        "supa": [
+            "horizontal"
+        ],
+        "suwi": [
+            "sweet",
+            "fragrant",
+            "cute",
+            "innocent",
+            "adorable"
+        ],
+        "tan": [
+            "by",
+            "from",
+            "because"
+        ],
+        "taso": [
+            "but",
+            "however",
+            "only"
+        ],
+        "tawa": [
+            "going",
+            "toward",
+            "moving"
+        ],
+        "telo": [
+            "water",
+            "liquid",
+            "fluid",
+            "wet",
+            "beverage"
+        ],
+        "tenpo": [
+            "time",
+            "duration",
+            "moment",
+            "occasion",
+            "period",
+            "situation"
+        ],
+        "toki": [
+            "hello",
+            "communicate",
+            "say",
+            "speak",
+            "talk",
+            "language",
+            "think"
+        ],
+        "tomo": [
+            "indoor",
+            "building",
+            "home",
+            "house",
+            "room"
+        ],
+        "tu": [
+            "two"
+        ],
+        "unpa": [
+            "relations"
+        ],
+        "uta": [
+            "mouth",
+            "lips",
+            "oral",
+            "cavity",
+            "jaw"
+        ],
+        "utala": [
+            "battle",
+            "challenge",
+            "compete",
+            "struggle"
+        ],
+        "walo": [
+            "white",
+            "whitish",
+            "pale"
+        ],
+        "wan": [
+            "unique",
+            "nited"
+        ],
+        "waso": [
+            "bird",
+            "winged"
+        ],
+        "wawa": [
+            "strong",
+            "powerful",
+            "confident",
+            "sure",
+            "energetic",
+            "intense"
+        ],
+        "weka": [
+            "absent",
+            "away",
+            "ignored"
+        ],
+        "wile": [
+            "must",
+            "need",
+            "require",
+            "should",
+            "want",
+            "wish"
+        ]
+    }
 }
