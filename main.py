@@ -34,7 +34,7 @@ class Worder:
 			self.load_file()
 			if self.content:
 				if len(self.wordlist) == 0:
-					self.wordlist = list(self.content)
+					self.wordlist = list(self.content["Language"])
 				self.newWord()
 	def load_file(self, file=-1, changing=False, label="", border=""):
 		if file == -1:
@@ -57,7 +57,7 @@ class Worder:
 		else:
 			self.content = content
 			if type(self.content) != type(1):
-				self.wordlist = list(self.content)
+				self.wordlist = list(self.content["Language"])
 			if changing:
 				if border != "":
 					border.config(bg=GREEN)
@@ -76,7 +76,7 @@ class Worder:
 	def check_translation(self, entry):
 		answare = entry.get()
 		if self.content != 0:
-			if answare.lower() in self.content[self.label["text"]]:
+			if answare.lower() in self.content["Language"][self.label["text"]]:
 				sound("source\\correct.wav")
 				self.label.config(bg=GREEN)
 				self.root.update()
@@ -128,32 +128,32 @@ class Worder:
 		self.update_points()
 		self.cleanansw(lst)
 		current = word
-		if type(self.content[current]) == type(""):
+		if type(self.content["Language"][current]) == type(""):
 			lst.insert(END, word)
 		else:
-			for word in self.content[current]:
+			for word in self.content["Language"][current]:
 				lst.insert(END, "    {}".format(word.title()))
 	def addNewAnsware(self, ans, delete=False):
 		word = self.label["text"]
 		if self.content:
-			print("1")
+			#print("1")
 			if ans != " " and ans != "":
-				print("2")
-				if ans in self.content[word]:
-					print("3")
+				#print("2")
+				if ans in self.content["Language"][word]:
+					#print("3")
 					if not delete:
 						return 0
 				ans = ans.lower()
 				ans = ans.strip()
-				if delete and not ans in self.content[word]:
+				if delete and not ans in self.content["Language"][word]:
 					return
 				self.label.config(bg=YELLOW)
 				sound("source\\added.wav")
 				self.root.update()
 				if delete:
-					self.content[word].remove(ans)
+					self.content["Language"][word].remove(ans)
 				else:
-					self.content[word].append(ans)
+					self.content["Language"][word].append(ans)
 				self.getansw()
 				sleep(0.4)
 				self.label.config(bg=SILVER)
