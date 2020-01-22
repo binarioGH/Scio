@@ -11,6 +11,8 @@ def sound(file):
 	PlaySound(file, SND_ASYNC)
 
 
+
+
 class WindowConfiguration:
 	def __init__(self):
 		self.WIDTH = 700
@@ -20,7 +22,14 @@ class WindowConfiguration:
 		self.WRONG = "#DF013A"
 		self.GOOD = "#00FF80"
 		self.ADD_WORD = "F7FE2E" 
+
+
 wc = WindowConfiguration()
+
+def load_colors(content):
+	for value in content:
+		if value in dir(wc):
+			exec("wc.{} = {}".format(value, content[value])) 
 class Worder:
 	def __init__(self,root, file="", answares="" ,open_file=True, fnt=("Courier", 15)):
 		self.label = Label(root, bg=wc.SECONDARY_COLOR, font=fnt, fg="black", justify="left")
@@ -57,6 +66,7 @@ class Worder:
 				#print("Works")
 			return -1
 		else:
+			load_colors(content["Colors"])
 			self.content = content
 			if type(self.content) != type(1):
 				self.wordlist = list(self.content["Language"])
