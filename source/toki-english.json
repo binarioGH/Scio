@@ -1,5 +1,13 @@
 {
-    "Colors": {},
+    "Colors": {
+        "WIDTH": 700,
+        "HEIGHT": 400,
+        "MAIN_COLOR": "#00FF80",
+        "SECONDARY_COLOR": "#ECF0F1",
+        "WRONG": "#DF013A",
+        "GOOD": "#00FF80",
+        "ADD_WORD": "F7FE2E"
+    },
     "Language": {
         "akesi": [
             "reptile",
