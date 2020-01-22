@@ -29,7 +29,7 @@ wc = WindowConfiguration()
 def load_colors(content):
 	for value in content:
 		if value in dir(wc):
-			exec("wc.{} = {}".format(value, content[value])) 
+			exec("wc.{} = '{}'".format(value, content[value])) 
 class Worder:
 	def __init__(self,root, file="", answares="" ,open_file=True, fnt=("Courier", 15)):
 		self.label = Label(root, bg=wc.SECONDARY_COLOR, font=fnt, fg="black", justify="left")
@@ -176,7 +176,7 @@ class Worder:
 
 
 
-def main():
+def main(FILE):
 	
 	root = Tk()
 	root.title("Scio")
@@ -201,7 +201,7 @@ def main():
 	scrollbar.config(command=answarebox.yview)
 	questionborder = Label(questions, bg="black")
 	questionborder.place(relx=0, rely=0.3, relwidth=1, relheight=0.052)
-	wordquestion = Worder(questions, "source\\esperanto-english.json", answarebox)
+	wordquestion = Worder(questions, FILE, answarebox)
 	words = Listbox(dictionary, bg="white", font=("Courier", 18))
 	words.place(relx=0.2, rely=0.4, relwidth=0.6, relheight=0.5)
 	dicscroll = Scrollbar(words)
@@ -251,5 +251,27 @@ def main():
 	root.mainloop()
 
 
+def login(): #This is actually a fucking fishing
+	root = Tk()
+	root.title("Login")
+	root.geometry("{}x{}".format(wc.WIDTH, wc.HEIGHT))
+	mainFrame = Frame(root, bg="#ECF0F1")
+	mainFrame.place(relx=0, rely=0, relwidth=1, relheight=1)
+	login = Canvas(mainFrame, bg="#ECF0F1")
+	login.place(relx=0.3,rely=0,relwidth=0.7,relheight=1)
+	title = Label(login, font=("Courier, 14"), bg="#ECF0F1",fg="#FF361C", text="LAUSD Login")
+	title.place(relx=0.3,rely=0.07, relwidth=0.4, relheight=0.2)
+	logocanvas = Canvas(mainFrame, bg="#667BFF")
+	logocanvas.place(relx=0, rely=0, relwidth=0.3,relheight=1)
+	imagecanvas = Canvas(logocanvas, bg="black")      
+	imagecanvas.place(relx=0.04,rely=0.02, width=195, height=195)     
+	img = PhotoImage(file="lmao.png")      
+	imagecanvas.create_image(0.5,0.5,anchor=NW,image=img) 
+
+	root.mainloop()
 if __name__ == '__main__':
-	main()
+	login() 
+	#main("source\\esperanto-english.json")
+	#"source\\esperanto-english.json"
+	#"source\\toki-english.json"
+	#"source\\english-esperanto.json"
