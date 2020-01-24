@@ -2,7 +2,7 @@
     "Colors": {
         "WIDTH": 700,
         "HEIGHT": 400,
-        "MAIN_COLOR": "##F2FF42",
+        "MAIN_COLOR": "#F2FF42",
         "SECONDARY_COLOR": "#9D29FF",
         "WRONG": "#DF013A",
         "GOOD": "#00FF80",

@@ -252,11 +252,26 @@ def main(FILE):
 	ssearch.place(relx=0.65, rely=0.45, relwidth=0.16, relheight=0.1)
 	root.mainloop()
 
+def select_language(lang, root):
+	wc.file = lang
+	root.destroy()
+
+
+def select_file():
+	root = Tk()
+	root.title("Scio")
+	root.geometry("{}x{}".format(wc.WIDTH, wc.HEIGHT))
+	mframe = Frame(root, bg="#00FF80") #Main Frame
+	mframe.place(relx=0, rely=0, relwidth=1, relheight=1)
+	esperanto_english = Button(mframe, font=("Courier", 20), text="Esperanto - English", command=lambda:select_language("source\\esperanto-english.json", root))
+	esperanto_english.place(relx=0.2, rely=0.2, relwidth=0.6, relheight=0.1)
+	english_english = Button(mframe, font=("Courier", 20), text="English - Esperanto", command=lambda:select_language("source\\english-esperanto.json", root))
+	english_english.place(relx=0.2, rely=0.4, relwidth=0.6, relheight=0.1)
+	toki_pona = Button(mframe, font=("Courier", 20), text="English - Toki Pona", command=lambda:select_language("source\\toki-english.json", root))
+	toki_pona.place(relx=0.2, rely=0.6, relwidth=0.6, relheight=0.1)
+	root.mainloop()
 
 if __name__ == '__main__':
 	#login() 
-	#select_file()
+	select_file()
 	main(wc.file)
-	#"source\\esperanto-english.json"
-	#"source\\toki-english.json"
-	#"source\\english-esperanto.json"
